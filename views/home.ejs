@@ -1,0 +1,32 @@
+<!-- Partial templates -->
+ 
+<%- include('./partials/html-head') %>
+<%- include('./partials/nav') %>
+
+  <h1>We are rendering an EJS page!</h1>
+
+  <!-- Conditional -->
+
+  <% if (false) { %>
+    <p>This shows up!</p>
+  <% }else { %>
+    <p>Something else!</p>
+  <% } %>
+
+<!-- Show stuff on page tag -->
+
+    <p>Plus 2 is: <%= 2+2 %></p>
+
+<!-- This is for passing an object through the render function -->
+
+<p><%= msgDisplay.msg %>, <%= playerName.player.friend %>!</p> 
+
+<!-- This is to loop through the inventory -->
+
+<% inventory.forEach((item, index) => {%>
+    <a href="/<%=index%>">
+    <li><%= item.name %> and this is the qty: <%= item.qty %></li>
+    </a>
+<% }) %>
+</body>
+</html>

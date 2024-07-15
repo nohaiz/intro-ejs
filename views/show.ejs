@@ -1,0 +1,11 @@
+<!-- Partial template -->
+<%- include('./partials/html-head') %>
+<%- include('./partials/nav') %>
+
+<body>
+  <h1>Welcome to the <%= item.name %> page!</h1>
+  <p>There are <%= item.qty %> left.</p>
+  <p>There are <%= item.qty === 0 ? 'no items' : item.qty %> left.</p>
+
+</body>
+</html>
